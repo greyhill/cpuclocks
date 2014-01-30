@@ -16,7 +16,7 @@ pl.plot(years, speeds, 'o', alpha=.8, markeredgewidth=0, label='Intel CPUs')
 pl.ylabel('Clock Speed [Hz]')
 pl.xlabel('Year')
 pl.axis([None, None, -50, None])
-pl.title('Intel CPU Clock Speed')
+pl.title('Intel CPU Clock Speeds')
 pl.show()
 pl.savefig('intel_clock_speeds.pdf')
 
