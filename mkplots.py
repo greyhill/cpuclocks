@@ -12,7 +12,7 @@ for f in glob.glob('data/*.dat'):
             years.append(float(s[0]))
             speeds.append(float(s[1]))
 
-pl.scatter(years, speeds, marker='o', color='blue', 
+pl.semilogy(years, speeds, marker='o', color='blue', 
         linewidth=0, alpha=.8, label='Intel CPUs')
 pl.ylabel('Clock Speed [Hz]')
 pl.xlabel('Year')
@@ -39,9 +39,9 @@ cpu_xistor = parse_xistor_year_speed('data/cpu_transistor.txt')
 gpu_xistor = parse_xistor_year_speed('data/gpu_transistor.txt')
 
 pl.figure()
-pl.scatter(*cpu_xistor, label='CPU', marker='o', alpha=.8, 
+pl.semilogy(*cpu_xistor, label='CPU', marker='o', alpha=.8, 
         color='blue', linewidth=0)
-pl.scatter(*gpu_xistor, label='GPU', marker='o', alpha=.8, 
+pl.semilogy(*gpu_xistor, label='GPU', marker='o', alpha=.8, 
         color='green', linewidth=0)
 pl.axis([1970, 2015, -.1e9, None])
 pl.xlabel('Year')
